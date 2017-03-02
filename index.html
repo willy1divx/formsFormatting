@@ -1,0 +1,102 @@
+<!Doctype html>
+ <html>
+	<head>
+		<title>Angular</title>
+		<!-- jquery cdn -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<!-- bootstrap cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- javascript cdn -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- AngulaeJs cdn -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body class="container" ng-app="myApp">
+		<div ng-controller="myValues">
+			<div ng-hide="myVar" class="text-center">
+			<form novalidate class="simple-form" name="userForm">
+				<label>
+					First Name <input type="text" ng-model="form.first" value="first"> 
+				<br>
+				<br>
+					Last Name <input type="text" ng-model="form.last" value="last"> 
+				<br>
+				<br>
+					Gender <input type="text" ng-model="form.gender" value="gender"> 
+				<br>
+				<br>
+					Phone Number <input type="text" ng-model="form.phone" value="phone"> 
+				<br>
+				<br>
+					email <input type="text" ng-model="form.email" value="email"> 
+				<br>
+				<br>
+				WHAT IS YOUR FAVORITE COLOR?	
+				<br />
+				<br>
+					<input type="radio" ng-model="form.color" value="red"> red
+					<input type="radio" ng-model="form.color" value="white"> white
+					<input type="radio" ng-model="form.color" value="blue"> blue
+					<input type="radio" ng-model="form.color" value="yellow"> yellow
+					<input type="radio" ng-model="form.color" value="purple"> purple
+					<input type="radio" ng-model="form.color" value="green"> green
+					<input type="radio" ng-model="form.color" value="orange"> orange
+					<input type="radio" ng-model="form.color" value="black"> black
+					<br>
+					<br>
+					What continent are you from?
+					<br>
+					<br>
+					North America <input type="checkbox" value="North America" ng-model="form.North_America">
+					<br>
+					South America <input type="checkbox" value="South America" ng-model="form.South_America">
+					<br>
+					Eurpoe <input type="checkbox" value="Europe"ng-model="form.europe">
+					<br>
+					Africa <input type="checkbox" value="Africa" ng-model="form.africa">
+					<br>
+					Asia <input type="checkbox" value="Asia" ng-model="form.asia">
+					<br>
+					Australia <input type="checkbox" value="Australia" ng-model="form.australia">
+					<br>
+					<br>
+					in a couple of sentences tell me about yourself (NO MORE THAN  140 CHARACTERS)
+					<br>
+					<textarea type="text" name="bio"  rows="4" cols="50" ng-model="form.bio" maxlength="140"> 
+					 </textarea>
+					 <br>
+					 <br>
+					 <label for="singleSelect"> secret question: </label><br>
+					  <select name="singleSelect" ng-model="form.question">
+				      <option value="car">first car</option>
+				      <option value="mother">mother's maiden name</option>
+				      <option value="kiss">first kiss</option>
+				      <option value="pet">favorite pet</option>
+				    </select><br><br>
+				    YOUR ANSWER <input type="text" ng-model="form.secret" value="answer">
+				<br />
+				</label>
+				<br />
+				 
+    			 <input type="submit" ng-click="update(form)" value="Save"/>
+
+			</form>
+		</div ng-controll="greeting">
+			
+		<h1 class="text-center">	{{greeting.first}} <br>
+			{{greeting.last}} <br>
+			{{greeting.gender}} <br>
+			{{greeting.phone}} <br>
+			{{greeting.email}} <br>
+			{{greeting.color}} <br>
+			{{greeting.nationality}} <br>
+			{{greeting.bio}} <br>
+			{{greeting.question}} <br>
+			{{greeting.secret}} <br>
+		</h1>
+		</div>
+		
+		<script type="text/javascript"  src="js/app.js"></script>
+	</body>
+</html>
