@@ -22,7 +22,8 @@ app.controller('myValues', function($scope){
        	form.phone = results;
         for (var x in form){
 		    if (form[x] === true){
-		    form.nationality = x;
+		    var continent = document.getElementById(x).value;
+		    form.nationality = continent;
 	    	};
 		};
         $scope.greeting = form;
